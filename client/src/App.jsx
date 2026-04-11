@@ -14,7 +14,7 @@ import ProtectedRoute from "./admin/ProtectedRoute";
 import Footer from "./components/Footer";
 
 import AdminProducts from "./admin/AdminProducts"
-import AdminProductmanager from "./admin/adminProductmanager";
+import AdminProductManager from "./admin/AdminProductManager";
 
 import MasterManager from "./admin/Mastermanger";
 import AdminProductForm from "./admin/AdminProductForm";
@@ -89,7 +89,7 @@ function AppWrapper() {
         >
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="Products" element={<AdminProducts />} />
-          <Route path="ProductManager" element={<AdminProductmanager />} />
+          <Route path="ProductManager" element={<AdminProductManager />} />
           <Route path="master/:type" element={<MasterManager />} />
           <Route path="products/:id" element={<AdminProductForm />} />
            <Route path="AdminBlogForm" element={<AdminBlogForm/>} />
