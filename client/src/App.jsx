@@ -14,7 +14,7 @@ import ProtectedRoute from "./admin/ProtectedRoute";
 import Footer from "./components/Footer";
 
 import AdminProducts from "./admin/AdminProducts"
-import AdminProductManager from "./admin/AdminProductManager";
+import AdminProductManager from "./admin/AdminProductManager.jsx";
 
 import MasterManager from "./admin/Mastermanger";
 import AdminProductForm from "./admin/AdminProductForm";
