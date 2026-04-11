@@ -15,7 +15,7 @@ fetchItems()
 
 const fetchItems = async () => {
 
-const res = await axios.get(`http://localhost:5000/api/master/${type}`)
+const res = await axios.get(`https://swami-global-trade.onrender.com/api/master/${type}`)
 
 setItems(res.data.data || [])
 
@@ -25,7 +25,7 @@ const handleAdd = async (e) => {
 
 e.preventDefault()
 
-await axios.post((`http://localhost:5000/api/master/${type}`),{ name })
+await axios.post((`https://swami-global-trade.onrender.com//api/master/${type}`),{ name })
 
 setName("")
 
@@ -35,7 +35,7 @@ fetchItems()
 
 const handleDelete = async (id) => {
 
-await axios.delete(`http://localhost:5000/api/master/${type}/${id}`)
+await axios.delete(`https://swami-global-trade.onrender.com/api/master/${type}/${id}`)
 
 fetchItems()
 

@@ -15,7 +15,7 @@ const AdminProductManager = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://swami-global-trade.onrender.com/api/products");
       setProducts(res.data);
     } catch (err) {
       console.log(err);
@@ -26,7 +26,7 @@ const AdminProductManager = () => {
     if (!window.confirm("Delete this product?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://swami-global-trade.onrender.com/api/products/${id}`);
       alert("Product deleted");
       fetchProducts();
     } catch (err) {

@@ -15,13 +15,7 @@ import Footer from "./components/Footer";
 
 import AdminProducts from "./admin/AdminProducts"
 import AdminProductmanager from "./admin/adminProductmanager";
-import MasterAdminPanel from "./admin/Mastermanger";
-import ManageForms from "./admin/ManageForms";
-import ManageCategories from "./admin/ManageCategories"
-import ManageApplications from "./admin/ManageApplications";
-import ManagePackaging from "./admin/ManagePackaging";
-import ManageSubCategories from "./admin/ManageSubCategories";
-import ManageTechnicalSpecs from "./admin/ManageTechnicalSpecs";
+
 import MasterManager from "./admin/Mastermanger";
 import AdminProductForm from "./admin/AdminProductForm";
 import ProductPage from "./pages/ProductPage";

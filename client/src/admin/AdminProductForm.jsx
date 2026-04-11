@@ -20,7 +20,7 @@ const AdminProductForm = () => {
 
   const fetchProduct = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+      const res = await axios.get(`https://swami-global-trade.onrender.com/api/products/${id}`);
       const p = res.data;
 
       setProductName(p.productName || "");
@@ -60,10 +60,10 @@ data.append("description", description); // ✅ ADD THIS
       }
 
       if (id) {
-        await axios.put(`http://localhost:5000/api/products/${id}`, data);
+        await axios.put(`https://swami-global-trade.onrender.com/api/products/${id}`, data);
         alert("Updated Successfully");
       } else {
-        await axios.post("http://localhost:5000/api/products", data);
+        await axios.post("https://swami-global-trade.onrender.com/api/products", data);
         alert("Added Successfully");
       }
 

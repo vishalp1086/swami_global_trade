@@ -8,7 +8,7 @@ const AdminBlogList = () => {
 
   const fetchBlogs = async () => {
     const res = await axios.get(
-  `http://localhost:5000/api/blogs`
+  `https://swami-global-trade.onrender.com/api/blogs`
 );
     setBlogs(res.data);
   };
@@ -20,7 +20,7 @@ const AdminBlogList = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this blog?")) return;
 
-    await axios.delete(`http://localhost:5000/api/blogs/${id}`);
+    await axios.delete(`https://swami-global-trade.onrender.com/api/blogs/${id}`);
     fetchBlogs();
   };
 

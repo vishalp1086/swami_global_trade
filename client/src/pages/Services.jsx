@@ -61,7 +61,7 @@ useEffect(() => {
 
 const fetchProducts = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://swami-global-trade.onrender.com/api/products");
 
     // Only take product names
     const names = res.data.map((p) => p.productName);
@@ -76,7 +76,7 @@ const fetchProducts = async () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/enquiry", form);
+      await axios.post("https://swami-global-trade.onrender.com/api/enquiry", form);
       setSubmitted(true);
     } catch (err) {
       console.log(err);
