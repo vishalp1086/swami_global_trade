@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5A8DB8;
+  --color-primary-dark: #4A7AA3;
+  --color-lightbg: #F5F8FC;
+  --color-darktext: #1F2937;
+  --color-white: #FFFFFF;
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+.clipped-card {
+  clip-path: polygon(
+    0 0,
+    85% 0,
+    100% 15%,
+    100% 100%,
+    0 100%
+  );
+}
+.form-input{
+  width:100%;
+  border:1px solid #d1d5db;
+  padding:10px 12px;
+  border-radius:8px;
+  background:white;
+  color:#111827;
+  font-size:14px;
+}
+
+.form-input:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 1px #2563eb;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
