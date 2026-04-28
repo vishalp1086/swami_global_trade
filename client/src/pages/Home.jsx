@@ -96,13 +96,13 @@ export default function HomePage() {
 
             {/* buttons */}
             <div className="flex flex-row flex-wrap gap-2">
-              <div className="flex flex-col sm:flex-row gap-1 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[10px] flex items-center justify-center gap-1" onClick={() => navigate(`/services`)}>
+              <div className="flex flex-row sm:flex-row gap-1 justify-center">
+                <button className="bg-white text-blue-600 px-2 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[10px] flex items-center justify-center gap-1" onClick={() => navigate(`/services`)}>
                   <MessageSquare size={18} /> Request A Sample
                 </button>
               </div>
-              <div className="flex flex-col sm:flex-row gap-1 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[10px] flex items-center justify-center gap-1" onClick={() => navigate(`/services`)}>
+              <div className="flex flex-row sm:flex-row gap-1 justify-center">
+                <button className="bg-white text-blue-600 px-2 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[10px] flex items-center justify-center gap-1" onClick={() => navigate(`/services`)}>
                   <Send size={18} /> Send an Enquiry
                 </button>
               </div>
@@ -111,7 +111,7 @@ export default function HomePage() {
                 href="https://wa.me/919135666519"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-blue-600 px-5 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[10px] flex items-center justify-center gap-1">
+                className="bg-white text-blue-600 px-2 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[10px] flex items-center justify-center gap-1">
                 <FaWhatsapp size={18} />
                 WhatsApp Us</a>
             </div>
