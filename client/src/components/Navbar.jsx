@@ -74,7 +74,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/60 z-40 transition-opacity" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 bg-[#0c4a6e] z-40 transition-opacity" onClick={() => setIsOpen(false)} />
       )}
 
       {/* Mobile Drawer */}
@@ -83,11 +83,11 @@ const Navbar = () => {
     isOpen ? "translate-x-0" : "translate-x-full"
   } z-100`}
       >
-        <div className="flex justify-end p-6">
+        <div className="flex justify-end p-4">
           <button className="text-3xl" onClick={() => setIsOpen(false)}>✕</button>
         </div>
 
-        <div className="flex flex-col space-y-8 px-8 mt-4 text-lg font-medium bg-[#0c4a6e]">
+        <div className="flex flex-col space-y-8 px-6 text-lg font-medium bg-[#0c4a6e]">
           {navItem("/", "HOME")}
           {navItem("/about", "ABOUT US")}
           {navItem("/products", "PRODUCTS")}
@@ -97,7 +97,7 @@ const Navbar = () => {
           
           <button
             onClick={() => { navigate("/contact"); setIsOpen(false); }}
-            className="bg-amber-400 text-cyan-900 px-5 py-3 rounded-lg font-bold text-center"
+            className="bg-amber-400 text-cyan-900 px-3 py-2 rounded-lg font-bold text-center"
           >
             Get In Touch
           </button>

@@ -115,8 +115,8 @@ const fetchProducts = async () => {
     );
   }
 
-  return (<div className=" bg-linear-to-r from-purple-200 via-blue-100 to-purple-300">
-  <Hero
+  return (<>
+   <Hero
       title="Get in Touch"
         subtitle="Enquiries | Sample Requests | Documentation"
         image={homeHero}
@@ -124,6 +124,9 @@ const fetchProducts = async () => {
 Whether you need a Technical Data Sheet, a price indication, a sample before committing, or just want to ask a product question — fill in the form below and we will get back to you within 24 hours.
 "
       />
+  
+  <div className=" bg-linear-to-r from-purple-200 via-blue-100 to-purple-300">
+ 
 
  
 
@@ -316,6 +319,7 @@ Whether you need a Technical Data Sheet, a price indication, a sample before com
   </div>
 </div>
 </div>
+</>
   )
 };
 

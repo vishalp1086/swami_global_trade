@@ -47,14 +47,16 @@ export default function HomePage() {
 
 
 
-  return (
-    <div className="w-full overflow-x-hidden bg-linear-to-r from-purple-200 via-blue-100 to-purple-300">
-      <Hero
+  return (<>
+
+  <Hero
         title="Swami Global Trade LLP"
         subtitle="India’s Produce. Documented. Delivered"
         image={Hommain}
         description="Delivering Trust Globally"
       />
+    <div className="w-full bg-linear-to-r from-purple-200 via-blue-100 to-purple-300">
+      
       
       <section className="py-16 bg-linear-to-r from-purple-200 via-blue-100 to-purple-300">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
@@ -305,5 +307,6 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
