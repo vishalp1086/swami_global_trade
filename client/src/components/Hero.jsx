@@ -29,7 +29,7 @@ const Hero = ({ title, subtitle, image, description }) => {
             {subtitle}
           </p>
 
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg max-w-md md:max-w-xl lg:max-w-2xl mx-auto leading-relaxed opacity-90">
+          <p className="text-[10px] sm:text-sm md:text-base lg:text-lg max-w-md md:max-w-xl lg:max-w-2xl mx-auto leading-relaxed opacity-90">
             {description}
           </p>
 
