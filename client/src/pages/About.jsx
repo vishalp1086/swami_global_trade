@@ -107,7 +107,7 @@ export default function About() {
         <section className="py-12 md:py-20 px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-xs md:text-sm uppercase tracking-widest text-blue-600 font-bold mb-4">Why "Swami"?</h2>
-            <p className="text-lg md:text-2xl italic text-slate-700 leading-relaxed mb-8">
+            <p className="text-lg md:text-2xl  text-slate-700 leading-relaxed mb-8">
               "Swami Global Trade LLP takes its name from Shri Swami Samarth — a great spiritual master from India, revered across Maharashtra and beyond as a master of unwavering integrity."
             </p>
             <div className="max-w-2xl mx-auto text-left space-y-4 text-slate-600">
@@ -147,9 +147,9 @@ export default function About() {
         <section className="py-12 md:py-20 px-4 md:px-6 bg-slate-900 text-slate-100">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Operational Standards</h2>
-              <p className="text-slate-400 text-sm md:text-base mb-2">What You Can Expect From Us</p>
-              <p className="max-w-3xl mx-auto text-sm md:text-base text-slate-300">We are a trading firm. We source exclusively from manufacturers with certified processing facilities. Depending on the product and manufacturer, certifications include HACCP, ISO 22000, BRCGS, FSSC 22000, and IFS — and we verify this before onboarding any new supplier</p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">What You Can Expect From Us</h2>
+              <p className="text-slate-400 text-sm md:text-base mb-2"></p>
+              <p className="max-w-3xl mx-auto text-sm md:text-base text-slate-300">We are a trading firm. We source exclusively from manufacturers with certified processing facilities. Depending on the product and manufacturer, Certifications include ISO, HACCP, GMP, BRCGS, GAP, FSSC 22000 and IFS etc. — and we verify this before onboarding any new supplier</p>
             </div>
 
             {/* Wrapper Section */}
@@ -159,13 +159,8 @@ export default function About() {
   <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col w-full h-full">
     <FileText className="w-10 h-10 text-blue-400 mb-6 shrink-0" />
     <h3 className="text-xl font-bold mb-4 text-white">Documentation</h3>
-    <p className="text-slate-400 text-sm leading-relaxed text-left whitespace-normal break-words">
-      Every shipment comes with a batch-wise Certificate of Analysis. Phytosanitary certificates, 
-      certificates of origin, and full export documentation come standard with every shipment. 
-      Pesticide residue and heavy metals reports tested at an accredited laboratory are arranged 
-      prior to dispatch and provided on request. Halal and Kosher certification is available 
-      on request please specify at enquiry. For new buyers, we recommend third-party 
-      inspection before shipment and are happy to facilitate it.
+    <p className="text-slate-400 text-sm leading-relaxed text-justify whitespace-normal break-words">
+      Phytosanitary certificate, certificate of origin, fumigation certificate, and all statutory export documents accompany every consignment without exception. Halal and Kosher certified product is available — please confirm your requirement at enquiry stage. We actively support pre-shipment inspection by a third-party agency of your choice; a buyer who inspects before they pay is a buyer who comes back.
     </p>
   </div>
 
@@ -173,7 +168,7 @@ export default function About() {
   <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col w-full h-full">
     <ShieldCheck className="w-10 h-10 text-blue-400 mb-6 shrink-0" />
     <h3 className="text-xl font-bold mb-4 text-white">Sourcing Standard</h3>
-    <p className="text-slate-400 text-sm leading-relaxed text-left">
+    <p className="text-slate-400 text-sm leading-relaxed text-justify">
       We do not work with every manufacturer who approaches us. Before onboarding any supplier, 
       we verify their certifications independently. If the certifications are not current, 
       valid, and relevant to the product — the conversation ends there. This is not a one-time 
@@ -185,11 +180,8 @@ export default function About() {
   <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col w-full h-full">
     <CheckCircle className="w-10 h-10 text-blue-400 mb-6 shrink-0" />
     <h3 className="text-xl font-bold mb-4 text-white">Quality Promise</h3>
-    <p className="text-slate-400 text-sm leading-relaxed text-left">
-      We arrange independent third-party testing on every batch before dispatch — not 
-      manufacturer self-testing, not occasional spot checks. Every batch, every time. 
-      The batch-wise Certificate of Analysis travels with your shipment. Pesticide residue 
-      and heavy metals reports are arranged on request.
+    <p className="text-slate-400 text-sm leading-relaxed text-justify">
+     Every batch is independently tested at a NABL-accredited laboratory before dispatch — not manufacturer self-declaration, not occasional spot checks. Every batch, every time. The Certificate of Analysis covers moisture, colour value, mesh size, and microbiological parameters and travels with every shipment as standard. Pesticide residue and heavy metals testing is conducted at the same NABL-accredited laboratory prior to loading, in full compliance with the regulatory requirements of the destination country.
     </p>
   </div>
 </div>

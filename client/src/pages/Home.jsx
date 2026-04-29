@@ -90,19 +90,19 @@ export default function HomePage() {
               Delivering Trust Globally.
             </h4>
 
-            <p className="mb-6 text-sm md:text-base text-gray-600 leading-relaxed">
+            <p className="mb-6 text-sm md:text-base text-gray-600 text-justify leading-relaxed">
               Swami Global Trade LLP is an Indian export firm dealing in dehydrated vegetables, spices, and frozen food. We source exclusively from certified manufacturers, arrange independent third-party testing on every batch, and ensure complete trade documentation on every shipment — so your import is clean, compliant, and without surprises.
             </p>
 
             {/* buttons */}
             <div className="flex flex-row flex-wrap gap-2">
               <div className="flex flex-row sm:flex-row gap-1 justify-center">
-                <button className="bg-white text-blue-600 px-2 py-2 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[6px] md:text-[10px] flex items-center justify-center gap-0.5" onClick={() => navigate(`/services`)}>
+                <button className="bg-white text-blue-600 px-2 py-2 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[7px] md:text-[10px] flex items-center justify-center gap-0.5" onClick={() => navigate(`/services`)}>
                   <MessageSquare size={18} /> Request A Sample
                 </button>
               </div>
               <div className="flex flex-row sm:flex-row gap-1 justify-center">
-                <button className="bg-white text-blue-600 px-2 py-2 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[6px]  md:text-[10px] flex items-center justify-center " onClick={() => navigate(`/services`)}>
+                <button className="bg-white text-blue-600 px-2 py-2 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[7px]  md:text-[10px] flex items-center justify-center " onClick={() => navigate(`/services`)}>
                   <Send size={18} /> Send an Enquiry
                 </button>
               </div>
@@ -111,7 +111,7 @@ export default function HomePage() {
                 href="https://wa.me/919135666519"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-blue-600 px-2 py-2 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[6px]  md:text-[10px] flex items-center justify-center ">
+                className="bg-white text-blue-600 px-2 py-2 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-[7px]  md:text-[10px] flex items-center justify-center ">
                 <FaWhatsapp size={18} />
                 WhatsApp Us</a>
             </div>
@@ -181,8 +181,8 @@ export default function HomePage() {
                   <span className="text-green-500 text-xl">✔</span>
                 </div>
               </div>
-              <h2 className="text-xl font-semibold mb-2 text-center">Certified Sourcing</h2>
-              <p className="text-gray-400 mb-6 text-center">We source exclusively from manufacturers with certified processing facilities — verified before onboarding.</p>
+              <h2 className="text-lg font-semibold mb-5 text-center">Certified Sourcing</h2>
+              <p className="text-gray-400 mb-6 leading-relaxed text-justify">We source exclusively from manufacturers with certified processing facilities — verified before onboarding.</p>
             </div>
 
             <div className="bg-gray-800 text-white p-6 sm:p-8 rounded-xl shadow-2xl">
@@ -191,8 +191,8 @@ export default function HomePage() {
                   <span className="text-green-500 text-xl">✔</span>
                 </div>
               </div>
-              <h2 className="text-xl font-semibold mb-2 text-center">Every Batch. Independently Tested.</h2>
-              <p className="text-gray-400 mb-6 text-center">We arrange independent third-party testing on every batch — not manufacturer self-testing.The batch-wise Certificate of Analysis travels with your</p>
+              <h2 className="text-lg font-semibold mb-2 text-center">Every Batch Independently Tested</h2>
+              <p className="text-gray-400 mb-6  leading-relaxed text-justify">We arrange independent third-party testing on every batch — not manufacturer self-testing.The batch-wise Certificate of Analysis travels with your shipment.</p>
             </div>
 
             <div className="bg-gray-800 text-white p-6 sm:p-8 rounded-xl shadow-2xl">
@@ -201,8 +201,8 @@ export default function HomePage() {
                   <span className="text-green-500 text-xl">✔</span>
                 </div>
               </div>
-              <h2 className="text-xl font-semibold mb-2 text-center">Complete Documentation</h2>
-              <p className="text-gray-400 mb-6 text-center">Batch-wise COA, phytosanitary certificate, certificate of origin, and full export documentation.standard on every shipment</p>
+              <h2 className="text-lg font-semibold mb-5 text-center">Complete Documentation</h2>
+              <p className="text-gray-400 mb-6 text-justify leading-relaxed ">Batch-wise COA, phytosanitary certificate, certificate of origin, and full export documentation-standard on every shipment.</p>
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function HomePage() {
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold"> ✓ </div>
               <p className="mt-3 font-semibold">Step 3</p>
               <p className="text-sm font-medium"> Place Your Order </p>
-              <p className="text-xs text-gray-500 mt-1 px-2"> Confirm requirements. We handle sourcing & shipment. </p>
+              <p className="text-xs text-gray-500 mt-1 px-2"> Confirm requirements. We handle sourcing and shipment. </p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-10 text-sm text-white/80 max-w-2xl mx-auto leading-relaxed">
-          Sourced from manufacturers with HACCP, ISO 22000, BRCGS, FSSC 22000 and IFS certified facilities.
+          Sourced from manufacturers with ISO / HACCP / GMP / BRCGS / GAP / FSSC 22000 / IFS certified facilities.
         </p>
       </section>
 
@@ -270,7 +270,7 @@ export default function HomePage() {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-3xl font-semibold text-gray-700"> Ready to Source from India? </h2>
           <div className="w-12 h-1 bg-green-500 mx-auto my-4"></div>
-          <p className="text-gray-500 text-sm"> Send us an enquiry and we will respond within 24 hours — with a Technical Data Sheet, pricing indication, and sample availability. </p>
+          <p className="text-gray-500 text-sm"> Send us an enquiry and we will respond within 24 hours — with pricing indication, and sample availability. </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-center">
