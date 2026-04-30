@@ -130,7 +130,7 @@ For pricing indication, sample requests, or any product question — fill in the
 
  
 
-<div className=" py-14 mt-10">
+<div className=" py-14 ">
 
   <div className="max-w-7xl mx-auto px-6">
 
@@ -203,7 +203,10 @@ For pricing indication, sample requests, or any product question — fill in the
   </div>
 
 </div>
-    <div className="max-w-4xl mx-auto my-12  overflow-hidden rounded-2xl shadow-2xl flex flex-col md:flex-row">
+
+<div className=" w-full px-4 sm:px-6">
+    
+    <div className="max-w-4xl mx-auto my-8  sm:my-12 overflow-hidden rounded-2xl shadow-2xl flex flex-col md:flex-row">
   
   {/* LEFT SIDE: CONTEXT (Matches the screenshot layout) */}
   <div className="md:w-1/3 bg-[#1C2B3F] p-10 text-white flex flex-col justify-center">
@@ -317,6 +320,7 @@ For pricing indication, sample requests, or any product question — fill in the
 
     </form>
   </div>
+</div>
 </div>
 </div>
 </>
