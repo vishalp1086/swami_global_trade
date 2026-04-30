@@ -10,7 +10,7 @@ import "react-phone-input-2/lib/style.css";
 
 const enquiryTypes = [
   "Request a Sample",
-  "Technical Data Sheet",
+  
   "Price Enquiry",
   "General Enquiry",
 ];
@@ -121,7 +121,7 @@ const fetchProducts = async () => {
         subtitle="Enquiries | Sample Requests | Documentation"
         image={homeHero}
       description="
-Whether you need a Technical Data Sheet, a price indication, a sample before committing, or just want to ask a product question — fill in the form below and we will get back to you within 24 hours.
+For pricing indication, sample requests, or any product question — fill in the form below. We respond to every enquiry within 24 hours.
 "
       />
   
@@ -158,8 +158,8 @@ Whether you need a Technical Data Sheet, a price indication, a sample before com
           24-Hour Response
         </h3>
 
-        <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-          We respond to every enquiry within 24 hours — with a Technical Data Sheet, pricing indication, and sample availability.
+        <p className="text-gray-600 text-sm mt-2 leading-relaxed text-justify">
+         Send us your requirement. We will come back within 24 hours with pricing indication and sample availability.
         </p>
 
       </div>
@@ -175,8 +175,8 @@ Whether you need a Technical Data Sheet, a price indication, a sample before com
           Samples Available
         </h3>
 
-        <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-          We send samples before any commitment. Review the product, test it, approve it.
+        <p className="text-gray-600 text-sm mt-2 leading-relaxed text-justify">
+          Request a sample before you commit. Review the product, test it, approve it — then place your order.
         </p>
 
       </div>
@@ -192,7 +192,7 @@ Whether you need a Technical Data Sheet, a price indication, a sample before com
           Complete Documentation
         </h3>
 
-        <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+        <p className="text-gray-600 text-sm mt-2 leading-relaxed text-justify">
           Batch-wise COA, phytosanitary certificate, certificate of origin, and full export documentation — standard on every shipment.
         </p>
 
@@ -209,7 +209,7 @@ Whether you need a Technical Data Sheet, a price indication, a sample before com
   <div className="md:w-1/3 bg-[#1C2B3F] p-10 text-white flex flex-col justify-center">
     <h1 className="text-4xl font-bold leading-tight mb-4">Request a Customized Quote</h1>
     <p className="text-blue-100 opacity-80">
-      Complete the inquiry form to discuss objectives, and a logistics specialist will respond promptly.
+      Complete the inquiry form and we will respond promptly.
     </p>
     <div className="mt-8 pt-8 border-t border-white/10 text-sm text-blue-200">
       <p>• Enquiries</p>
@@ -295,7 +295,7 @@ Whether you need a Technical Data Sheet, a price indication, a sample before com
         
         <div className="flex flex-col">
           <label className="text-xs font-semibold text-blue-200 mb-1 ml-1 uppercase tracking-wider">Quantity</label>
-          <input name="quantity" placeholder="Bulk / Retail"
+          <input name="quantity" placeholder="Bulk"
             className="bg-white  border-none p-3 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none" onChange={handleChange} />
         </div>
       </div>

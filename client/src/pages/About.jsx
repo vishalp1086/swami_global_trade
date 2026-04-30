@@ -234,9 +234,9 @@ export default function About() {
         {/* SECTION 7 — CALL TO ACTION */}
         <section className="py-16 md:py-24 px-4 md:px-6 text-black text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Have a sourcing requirement?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Start With an Enquiry</h2>
             <p className="text-sm md:text-[14px] mb-10 opacity-90 max-w-2xl mx-auto">
-              Send us an enquiry and we will respond within 24 hours — with a Technical Data Sheet, pricing indication, and sample availability.
+              Tell us what you need  and we will respond within 24 hours — with pricing indication and sample availability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button

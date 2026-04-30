@@ -175,7 +175,7 @@ const Contact = () => {
     },
     {
       icon: <BriefcaseBusiness className="w-5 h-5 text-blue-600" />,
-      label: "Operations & Logistics",
+      label: "WhatsApp / Mobile",
       value: "+91 91356 66519",
       subtext: "For real-time shipment updates."
     },
@@ -188,7 +188,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-5 h-5 text-blue-600" />,
       label: "Business Address",
-      value: "Saileela”, Unit No. 3, Third Floor, Plot No. 4, Narayan Hut Society, Bhosari, Pune 411039, Maharashtra, India.",
+      value: ' "Saileela", Unit No. 3, Third Floor, Plot No. 4, Narayan Hut Society, Bhosari, Pune 411039, Maharashtra, India.',
       subtext:"Registered office address. Visits by prior appointment only"
     }
   ];
@@ -198,7 +198,7 @@ const Contact = () => {
       title="Contact Us"
         subtitle="Swami Global Trade LLP"
         image={homeHero}
-        description="Reach us by email, phone, or through the enquiry form below. We provide Technical Data Sheets, pricing, and sample availability within 24 hours."
+        description="For pricing indication, sample requests, or any product question — reach us by email, phone, or through the enquiry form below. We respond to every enquiry within 24 hours."
       />
     <div className="bg-slate-50 font-sans text-slate-800 min-h-screen relative">
       
@@ -283,9 +283,9 @@ const Contact = () => {
       <section className="w-full bg-linear-to-r from-purple-200 via-blue-100 to-purple-300 py-16 px-6 text-white text-center mt-12">
         <div className="max-w-4xl mx-auto">
           <Send className="w-10 h-10 mx-auto mb-6 text-green-600 opacity-60" />
-          <h2 className="text-3xl font-bold mb-4 text-gray-600">Have a sourcing requirement?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-600">Start With an Enquiry</h2>
           <p className="text-sm mb-10 opacity-90 leading-relaxed text-gray-600">
-            Send us an enquiry for product details, sample requests, or pricing. We ensure documentation is handled properly and shipments are delivered without surprises.
+            Fill in the form below for pricing indication, sample requests, or any product question. We respond within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 px-10 py-4 cursor-pointer rounded-md font-bold hover:bg-blue-50 transition-colors uppercase tracking-wider text-sm flex items-center justify-center gap-2" onClick={() => navigate(`/services`)}>

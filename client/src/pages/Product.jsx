@@ -84,8 +84,7 @@ const Product = () => {
       <section className="text-center px-6 pb-10">
 
         <p className="text-gray-600 max-w-4xl mx-auto text-sm">
-          Full specifications and packaging options available on each product page. Send us an enquiry and we will respond within 24 hours — with a Technical Data Sheet, pricing indication, and sample availability. Can’t find what you’re looking for? Send us an enquiry — we’ll let you know if we can source it.
-        </p>
+          Product specifications are available to download on each product page. For pricing indication or sample requests, send us an enquiry and we will respond within 24 hours. Can't find what you are looking for? We will let you know if we can source it.</p>
 
       </section>
 
