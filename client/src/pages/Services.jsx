@@ -203,7 +203,7 @@ For pricing indication, sample requests, or any product question — fill in the
   </div>
 
 </div>
-    <div className="max-w-4xl mx-6 my-12  overflow-hidden rounded-2xl shadow-2xl flex flex-col md:flex-row">
+    <div className="max-w-4xl mx-auto my-12  overflow-hidden rounded-2xl shadow-2xl flex flex-col md:flex-row">
   
   {/* LEFT SIDE: CONTEXT (Matches the screenshot layout) */}
   <div className="md:w-1/3 bg-[#1C2B3F] p-10 text-white flex flex-col justify-center">
@@ -223,7 +223,7 @@ For pricing indication, sample requests, or any product question — fill in the
     <form onSubmit={handleSubmit} className="space-y-5">
       
       {/* BASIC INFO */}
-      <div className="grid md:grid-cols-2 gap-5 mx-auto">
+      <div className="grid md:grid-cols-2 gap-5">
         <div className="flex flex-col">
           <label className="text-xs font-semibold text-blue-200 mb-1 ml-1 uppercase tracking-wider">Full Name *</label>
           <input name="name" required placeholder="John Doe"
