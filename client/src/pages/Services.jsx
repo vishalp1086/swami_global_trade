@@ -204,7 +204,7 @@ For pricing indication, sample requests, or any product question — fill in the
 
 </div>
 
-<div className=" w-full px-4 sm:px-6">
+<div className=" w-full px-2 sm:px-3">
     
     <div className="max-w-4xl mx-auto my-8  sm:my-12 overflow-hidden rounded-2xl shadow-2xl flex flex-col md:flex-row">
   
@@ -222,7 +222,7 @@ For pricing indication, sample requests, or any product question — fill in the
   </div>
 
   {/* RIGHT SIDE: FORM */}
-  <div className="md:w-2/3 bg-[#1C2B3F] px-5 py-4  md:p-10 border-l border-white/5">
+  <div className="md:w-2/3 bg-[#1C2B3F] px-3 py- md:p-10 border-l border-white/5">
     <form onSubmit={handleSubmit} className="space-y-5">
       
       {/* BASIC INFO */}
@@ -314,7 +314,7 @@ For pricing indication, sample requests, or any product question — fill in the
         />
       </div>
 
-      <button className="w-full md:w-auto cursor-pointer bg-white text-[#1C2B3F] font-bold px-10 py-4 rounded-full hover:bg-blue-50 transition-all transform active:scale-95 shadow-lg">
+      <button className="w-full md:w-auto cursor-pointer mb-2 bg-white text-[#1C2B3F] font-bold px-10 py-4 rounded-full hover:bg-blue-50 transition-all transform active:scale-95 shadow-lg">
         SUBMIT ENQUIRY
       </button>
 
