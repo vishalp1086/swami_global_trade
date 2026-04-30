@@ -15,6 +15,7 @@ const blogRoutes = require("./routes/blog.js");
 app.use(cors({
   origin: [
     "http://localhost:5173",
+    "https://swamiglobaltrade.vercel.app",
     "https://www.swamiglobaltrade.com",
     "https://swamiglobaltrade.com"
   ]
