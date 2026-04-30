@@ -12,7 +12,7 @@ const enquiryRoutes = require("./routes/enquiry");
 const blogRoutes = require("./routes/blog.js");
 
 // Middleware
-aapp.use(cors({
+app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://www.swamiglobaltrade.com",
