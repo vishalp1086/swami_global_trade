@@ -222,7 +222,7 @@ For pricing indication, sample requests, or any product question — fill in the
   </div>
 
   {/* RIGHT SIDE: FORM */}
-  <div className="md:w-2/3 bg-[#1C2B3F] px-3 py- md:p-10 border-l border-white/5">
+  <div className="md:w-2/3 bg-[#1C2B3F] px-3 py-2 md:p-10 border-l border-white/5">
     <form onSubmit={handleSubmit} className="space-y-5">
       
       {/* BASIC INFO */}
