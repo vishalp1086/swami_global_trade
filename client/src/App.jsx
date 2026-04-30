@@ -23,6 +23,8 @@ import BlogPage from "./pages/Blogpage";
 import AdminBlogForm from "./admin/AdminBlogForm";
 import SingleBlog from "./pages/SingleBlog";
 import AdminBlogList from "./admin/AdminBlogList";
+import Terms from "./pages/Terms.jsx";
+import Privacy from "./pages/Privacy.jsx";
 
 
 function AppWrapper() {
@@ -70,6 +72,8 @@ function AppWrapper() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/terms" element={<Terms/>} />
+          <Route path="/privacy" element={<Privacy/>} />
          <Route path="/blog/:slug" element={<SingleBlog/>}/>
          <Route path="/admin/AdminlogFrom" element={<AdminBlogForm/>}/>
           <Route path="/admin/AdminBlogList" element={<AdminBlogList />} />

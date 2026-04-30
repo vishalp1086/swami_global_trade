@@ -5,10 +5,13 @@ import {
   FaYoutube,
   FaEnvelope,
   FaPhoneAlt,
-  FaClock
+  FaClock,
+  FaLinkedinIn 
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-[#243c61] text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -46,18 +49,18 @@ const Footer = () => {
             </p>
 
             <div className="flex space-x-4">
-              <div className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
+              <a href="https://www.facebook.com/profile.php?id=61578449472757" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
                 <FaFacebookF size={14} />
-              </div>
-              <div className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
-                <FaTwitter size={14} />
-              </div>
-              <div className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
+              </a>
+              <a href="https://www.linkedin.com/company/111393211/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
+                <FaLinkedinIn  size={14} />
+              </a>
+              <a className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
                 <FaInstagram size={14} />
-              </div>
-              <div className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
+              </a>
+              <a className="w-9 h-9 flex items-center justify-center border border-white/20 rounded-full hover:bg-white hover:text-black transition cursor-pointer">
                 <FaYoutube size={14} />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -65,10 +68,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Useful Links</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li className="hover:text-white cursor-pointer">About Us</li>
-              <li className="hover:text-white cursor-pointer">Enquiry</li>
-              <li className="hover:text-white cursor-pointer">Products</li>
-              <li className="hover:text-white cursor-pointer">Contact Us</li>
+              <li className="hover:text-white cursor-pointer"onClick={() => navigate("/about")} >About Us</li>
+              <li className="hover:text-white cursor-pointer" onClick={() => navigate("/services")} >Enquiry</li>
+              <li className="hover:text-white cursor-pointer" onClick={() => navigate("/products")} >Products</li>
+              <li className="hover:text-white cursor-pointer" onClick={() => navigate("/contact")} >Contact Us</li>
+            <li className="hover:text-white cursor-pointer" onClick={() => navigate("/blog")} >Blogs</li>
             </ul>
           </div>
 
@@ -108,8 +112,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/10 text-gray-500 text-sm">
           <p>© 2026 Swami Global Trade. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <span className="hover:text-white cursor-pointer">Terms & Conditions</span>
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-white cursor-pointer"  onClick={() => navigate("/terms")} >Terms & Conditions</span>
+            <span className="hover:text-white cursor-pointer"  onClick={() => navigate("/privacy")} >Privacy Policy</span>
           </div>
         </div>
 
