@@ -107,7 +107,7 @@ export default function About() {
         <section className="py-12 md:py-20 px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-xs md:text-sm uppercase tracking-widest text-blue-600 font-bold mb-4">Why "Swami"?</h2>
-            <p className="text-lg md:text-2xl  text-slate-700 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl  text-slate-700 leading-relaxed mb-8">
               "Swami Global Trade LLP takes its name from Shri Swami Samarth — a great spiritual master from India, revered across Maharashtra and beyond as a master of unwavering integrity."
             </p>
             <div className="max-w-2xl mx-auto text-left space-y-4 text-slate-600">
