@@ -12,7 +12,13 @@ const enquiryRoutes = require("./routes/enquiry");
 const blogRoutes = require("./routes/blog.js");
 
 // Middleware
-app.use(cors());
+aapp.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://www.swamiglobaltrade.com",
+    "https://swamiglobaltrade.com"
+  ]
+}));
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 app.use("/api/products", productRoutes);
@@ -35,5 +41,5 @@ mongoose
   .catch((err) => console.log(err));
   app.use("/api/enquiry", enquiryRoutes);
   app.use("/api/blogs", blogRoutes);
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
