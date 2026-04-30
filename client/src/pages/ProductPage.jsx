@@ -23,7 +23,7 @@ const [lead, setLead] = useState({ name: "", email: "" });
   const fetchProduct = async () => {
     try {
       const res = await axios.get(
-        `https://swami-global-trade.onrender.com/api/products/${id}`
+        `https://swamiglobaltrade-production.up.railway.app/api/products/${id}`
       );
 
       setProduct(res.data);
@@ -40,7 +40,7 @@ console.log("PDF URL:", product?.pdf?.url);
 const handleDownload = async () => {
   try {
     const res = await axios.post(
-      "https://swami-global-trade.onrender.com/api/products/request-download",
+      "https://swamiglobaltrade-production.up.railway.app/api/products/request-download",
       {
         name: lead.name,
         email: lead.email,

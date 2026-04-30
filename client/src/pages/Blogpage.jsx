@@ -13,7 +13,7 @@ const BlogPage = () => {
   }, []);
 
   const fetchBlogs = async () => {
-    const res = await axios.get("https://swami-global-trade.onrender.com/api/blogs");
+    const res = await axios.get("https://swamiglobaltrade-production.up.railway.app/api/blogs");
 
     // latest first
     const sorted = res.data.sort(

@@ -13,7 +13,7 @@ const SingleBlog = () => {
 
   const fetchBlog = async () => {
     const res = await axios.get(
-      `https://swami-global-trade.onrender.com/api/blogs/${slug}`
+      `https://swamiglobaltrade-production.up.railway.app/api/blogs/${slug}`
     );
     setBlog(res.data);
   };
