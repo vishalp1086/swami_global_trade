@@ -223,7 +223,7 @@ For pricing indication, sample requests, or any product question — fill in the
     <form onSubmit={handleSubmit} className="space-y-5">
       
       {/* BASIC INFO */}
-      <div className="grid md:grid-cols-2 gap-5 mx-1">
+      <div className="grid md:grid-cols-2 gap-5 mx-auto">
         <div className="flex flex-col">
           <label className="text-xs font-semibold text-blue-200 mb-1 ml-1 uppercase tracking-wider">Full Name *</label>
           <input name="name" required placeholder="John Doe"
