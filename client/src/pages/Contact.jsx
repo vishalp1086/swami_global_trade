@@ -189,7 +189,7 @@ const Contact = () => {
       icon: <MapPin className="w-5 h-5 text-blue-600" />,
       label: "Business Address",
       value: ' "Saileela", Unit No. 3, Third Floor, Plot No. 4, Narayan Hut Society, Bhosari, Pune 411039, Maharashtra, India.',
-      subtext:"Registered office address. Visits by prior appointment only"
+      subtext:"Registered office address. Visits by prior appointment only."
     }
   ];
 

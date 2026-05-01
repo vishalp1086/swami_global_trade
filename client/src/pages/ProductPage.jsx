@@ -195,14 +195,14 @@ const handleDownload = async () => {
       onClick={() => navigate(`/services`)}
       className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
     >
-      <MessageSquare size={18} /> Request Sample
+      <MessageSquare size={18} /> Send a Sample
     </button>
 
     <button
       onClick={() => navigate(`/services`)}
       className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
     >
-      <Send size={18} /> Send Enquiry
+      <Send size={18} /> Send an Enquiry
     </button>
 
     <a
@@ -210,7 +210,7 @@ const handleDownload = async () => {
       target="_blank"
       className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
     >
-      <FaWhatsapp size={18} /> WhatsApp
+      <FaWhatsapp size={18} /> WhatsApp Us
     </a>
 
   </div>
