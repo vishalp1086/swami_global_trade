@@ -144,9 +144,17 @@ const handleDownload = async () => {
 {showModal && (
   <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
     
-    <div className="bg-white p-6 rounded-xl w-96 text-sm">
+    <div className="bg-white p-6 rounded-xl w-96 text-sm relative">
 
-      <h2 className=" font-semibold mb-4">
+      {/* ❌ CLOSE BUTTON */}
+      <button
+        onClick={() => setShowModal(false)}
+        className="absolute top-3 right-3 text-gray-500 hover:text-black text-xl"
+      >
+        ✕
+      </button>
+
+      <h2 className="font-semibold mb-4">
         Enter Details to Download
       </h2>
 
@@ -157,6 +165,7 @@ const handleDownload = async () => {
         onChange={(e) =>
           setLead({ ...lead, name: e.target.value })
         }
+        required
       />
 
       <input
@@ -166,6 +175,7 @@ const handleDownload = async () => {
         onChange={(e) =>
           setLead({ ...lead, email: e.target.value })
         }
+        required
       />
 
       <button
