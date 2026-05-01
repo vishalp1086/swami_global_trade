@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { CheckCircle, ShieldCheck, FileText, Users, MessageSquare, Phone,Send} from 'lucide-react';
+import { CheckCircle, ShieldCheck, FileText, Users, MessageSquare, Phone, Send } from 'lucide-react';
 import { FaWhatsapp } from "react-icons/fa";
+
 
 const ProductPage = () => {
 
-    const navigate=useNavigate()
+  const navigate = useNavigate()
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
-const [lead, setLead] = useState({ name: "", email: "" });
-
+  const [lead, setLead] = useState({ name: "", email: "" });
+  const [errors, setErrors] = useState({});
 
   const [product, setProduct] = useState(null);
   const [mainImage, setMainImage] = useState("");
@@ -33,51 +34,52 @@ const [lead, setLead] = useState({ name: "", email: "" });
       console.log(err);
     }
   };
-if (!product) return <p className="p-6">Loading...</p>;
+  if (!product) return <p className="p-6">Loading...</p>;
 
-console.log("PDF URL:", product?.pdf?.url);
+  console.log("PDF URL:", product?.pdf?.url);
 
-const handleDownload = async () => {
-  try {
-    const res = await axios.post(
-      "https://swamiglobaltrade-production.up.railway.app/api/products/request-download",
-      {
-        name: lead.name,
-        email: lead.email,
-        productId: product._id,
-      }
-    );
+  const handleDownload = async () => {
+    let newErrors = {};
 
-    // 1. Fetch the file as an ArrayBuffer (raw bytes)
-    const response = await axios.get(res.data.pdfUrl, {
-      responseType: 'blob' 
-    });
+    // Name validation
+    if (!lead.name.trim()) {
+      newErrors.name = "Name is required";
+    }
 
-    // 2. Create a Blob and EXPLICITLY set the type to application/pdf
-    const file = new Blob([response.data], { type: 'application/pdf' });
+    // Email validation
+    if (!lead.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email)) {
+      newErrors.email = "Enter valid email";
+    }
 
-    // 3. Create a URL for the blob
-    const fileURL = URL.createObjectURL(file);
+    // If errors → stop
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
 
-    // 4. Create a temporary link to trigger download
-    const pdfWindow = document.createElement('a');
-    pdfWindow.href = fileURL;
-    pdfWindow.setAttribute('download', `${product.productName.replace(/\s+/g, '_')}.pdf`);
-    document.body.appendChild(pdfWindow);
-    
-    pdfWindow.click();
+    try {
+      const res = await axios.post(
+        "https://swamiglobaltrade-production.up.railway.app/api/products/request-download",
+        {
+          name: lead.name,
+          email: lead.email,
+          productId: product._id,
+        }
+      );
 
-    // 5. Cleanup
-    pdfWindow.remove();
-    URL.revokeObjectURL(fileURL);
-    setShowModal(false);
+      // 👉 SIMPLER + RELIABLE
+      window.open(res.data.pdfUrl, "_blank");
 
-  } catch (err) {
-    console.error("Download error:", err);
-    // Fallback: If blob fails, try opening directly
-    window.open(product.pdf.url, "_blank");
-  }
-};
+      setShowModal(false);
+      setErrors({});
+      setLead({ name: "", email: "" });
+
+    } catch (err) {
+      console.error("Download error:", err);
+    }
+  };
   // reusable row
   const Row = (label, value) => {
     if (!value) return null;
@@ -123,103 +125,107 @@ const handleDownload = async () => {
         {/* RIGHT - INFO */}
         <div>
 
-  <h1 className="text-3xl font-bold">
-    {product.productName}
-  </h1>
-<div className=" mt-5">
-  {product.subTitle}
-</div>
-<div className=" mt-5">
-  {product.description}
-</div>
-  {/* DOWNLOAD PDF */}
- {product.pdf?.url && (
-  <button
-    onClick={() => setShowModal(true)}
-    className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-blue-700 transition"
-  >
-    Download Specification
-  </button>
-)}
-{showModal && (
-  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-    
-    <div className="bg-white p-6 rounded-xl w-96 text-sm relative">
+          <h1 className="text-3xl font-bold">
+            {product.productName}
+          </h1>
+          <div className=" mt-5">
+            {product.subTitle}
+          </div>
+          <div className=" mt-5">
+            {product.description}
+          </div>
+          {/* DOWNLOAD PDF */}
+          {product.pdf?.url && (
+            <button
+              onClick={() => setShowModal(true)}
+              className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-blue-700 transition"
+            >
+              Download Specification
+            </button>
+          )}
+          {showModal && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
 
-      {/* ❌ CLOSE BUTTON */}
-      <button
-        onClick={() => setShowModal(false)}
-        className="absolute top-3 right-3 text-gray-500 hover:text-black text-xl"
-      >
-        ✕
-      </button>
+              <div className="bg-white p-6 rounded-xl w-96 text-sm relative">
 
-      <h2 className="font-semibold mb-4">
-        Enter Details to Download
-      </h2>
+                {/* ❌ CLOSE BUTTON */}
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="absolute top-3 right-3 text-gray-500 hover:text-black text-xl"
+                >
+                  ✕
+                </button>
 
-      <input
-        type="text"
-        placeholder="Your Name"
-        className="w-full border p-2 mb-3"
-        onChange={(e) =>
-          setLead({ ...lead, name: e.target.value })
-        }
-        required
-      />
+                <h2 className="font-semibold mb-4">
+                  Enter Details to Download
+                </h2>
 
-      <input
-        type="email"
-        placeholder="Your Email"
-        className="w-full border p-2 mb-4"
-        onChange={(e) =>
-          setLead({ ...lead, email: e.target.value })
-        }
-        required
-      />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className={`w-full border p-2 mb-1 ${errors.name ? "border-red-500" : ""}`}
+                  onChange={(e) =>
+                    setLead({ ...lead, name: e.target.value })
+                  }
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-xs mb-2">{errors.name}</p>
+                )}
 
-      <button
-        onClick={handleDownload}
-        className="bg-blue-600 text-white w-full py-2 rounded cursor-pointer"
-      >
-        Submit & Download
-      </button>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className={`w-full border p-2 mb-1 ${errors.email ? "border-red-500" : ""}`}
+                  onChange={(e) =>
+                    setLead({ ...lead, email: e.target.value })
+                  }
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-xs mb-2">{errors.email}</p>
+                )}
 
-    </div>
-  </div>
-)}
-  {/* BUTTONS */}
-  <div className="flex flex-wrap gap-3 mt-8 text-sm">
+                <button
+                  onClick={handleDownload}
+                  className="bg-blue-600 text-white w-full py-2 rounded cursor-pointer"
+                >
+                  Submit & Download
+                </button>
 
-    <button
-      onClick={() => navigate(`/services`)}
-      className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
-    >
-      <MessageSquare size={18} /> Send a Sample
-    </button>
+              </div>
+            </div>
+          )}
+          {/* BUTTONS */}
+          <div className="flex flex-wrap gap-3 mt-8 text-sm">
 
-    <button
-      onClick={() => navigate(`/services`)}
-      className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
-    >
-      <Send size={18} /> Send an Enquiry
-    </button>
+            <button
+              onClick={() => navigate(`/services`)}
+              className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
+            >
+              <MessageSquare size={18} /> Send a Sample
+            </button>
 
-    <a
-      href="https://wa.me/919135666519"
-      target="_blank"
-      className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
-    >
-      <FaWhatsapp size={18} /> WhatsApp Us
-    </a>
+            <button
+              onClick={() => navigate(`/services`)}
+              className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
+            >
+              <Send size={18} /> Send an Enquiry
+            </button>
 
-  </div>
+            <a
+              href="https://wa.me/919135666519"
+              target="_blank"
+              className="bg-white text-blue-600 px-6 py-3 rounded-md  hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
+            >
+              <FaWhatsapp size={18} /> WhatsApp Us
+            </a>
 
-</div>
+          </div>
+
+        </div>
 
       </div>
 
-{/* <div className="mt-10">
+      {/* <div className="mt-10">
 
   <h2 className="text-2xl font-semibold mb-6 text-gray-800">
     Product Specifications
