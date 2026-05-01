@@ -207,65 +207,34 @@ exports.requestDownload = async (req, res) => {
   try {
     const { name, email, productId } = req.body;
 
+    console.log("Incoming request:", req.body);
+
     if (!name || !email) {
       return res.status(400).json({ message: "Name and Email required" });
     }
 
     const product = await Product.findById(productId);
 
-    if (!product || !product.pdf?.url) {
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    if (!product.pdf?.url) {
       return res.status(404).json({ message: "PDF not found" });
     }
 
-    // ✅ Email transporter
-    const transporter = nodemailer.createTransport({
-      host: "smtp.zoho.in",
-      port: 465,
-      secure: true,
-      auth: {
-        user: "info@swamiglobaltrade.com",
-        pass: "vegJi9-jeqsup-qemjiv", // ⚠️ move to .env later
-      },
+    console.log("PDF URL:", product.pdf.url);
+
+    // ✅ Skip email completely
+    return res.json({
+      message: "Download ready",
+      pdfUrl: product.pdf.url,
     });
-
-    // ✅ Send to ADMIN
-    await transporter.sendMail({
-      from: `"Website Lead" <info@swamiglobaltrade.com>`,
-      to: "info@swamiglobaltrade.com",
-      subject: "New PDF Download Lead",
-      html: `
-        <h3>New Lead</h3>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Product:</b> ${product.productName}</p>
-      `,
-    });
-
-    // ✅ Send to USER
-    await transporter.sendMail({
-      from: `"Swami Global Trade" <info@swamiglobaltrade.com>`,
-      to: email,
-      subject: `Download ${product.productName}`,
-      html: `
-        <p>Hello ${name},</p>
-        <p>Click below to download:</p>
-        <a href="${product.pdf.url}" target="_blank">Download PDF</a>
-      `,
-    });
-
-    // ✅ Inside requestDownload controller
-const fileName = encodeURIComponent(
-  product.productName.replace(/\s+/g, "_")
-) + ".pdf"; // <--- ADD THIS MANUALLY
-
-// ✅ Corrected response logic
-res.json({
-  message: "Email sent successfully",
-  pdfUrl: product.pdf.url, // Send the clean URL from Cloudinary
-});
 
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: error.message });
+    console.error("ERROR:", error);
+    res.status(500).json({
+      message: error.message,
+    });
   }
 };
