@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
     await resend.emails.send({
       from: "onboarding@resend.dev", // default testing sender
-      to: "reshma@swamiglobaltrade.com",
+      to: "vinayakaher@gmail.com",
       subject: "New Enquiry from Website",
 
       html: `
