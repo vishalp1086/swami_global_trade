@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import homeHero from "../assets/productpage.jpg";
+import homeHero from "../assets/abc.jpg";
 import Hero from "../components/Hero";
 import { CheckCircle, ShieldCheck, FileText, Users, MessageSquare, Phone } from 'lucide-react';
 

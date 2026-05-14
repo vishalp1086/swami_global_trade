@@ -159,7 +159,7 @@ import { BsFillBriefcaseFill } from "react-icons/bs";
 import React, { useState } from 'react';
 import { Mail, Clock, MapPin, Send, MessageSquare, BriefcaseBusiness, X } from 'lucide-react';
 import Hero from "../components/Hero";
-import homeHero from "../assets/home1.jpg";
+import homeHero from "../assets/ppp.jpg";
 import { useNavigate } from "react-router-dom";
 import contact from "../assets/contact.jpg";
 

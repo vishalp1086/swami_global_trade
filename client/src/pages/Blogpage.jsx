@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Hero from "../components/Hero";
-import homeHero from "../assets/home1.jpg";
+import homeHero from "../assets/abcd.jpg";
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);

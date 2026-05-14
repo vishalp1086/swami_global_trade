@@ -2,7 +2,7 @@ import { Truck, Package, Warehouse, Box, ArrowUp, PackageSearch, PackageOpen } f
 import { Share2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Eye, Target, ArrowUpRight } from 'lucide-react';
 import Hero from "../components/Hero";
-import homeHero from "../assets/aboutpage.jpg";
+import homeHero from "../assets/pp.jpg";
 import { CheckCircle, ShieldCheck, FileText, Users, MessageSquare, Phone } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import about from "../assets/about.jpeg";

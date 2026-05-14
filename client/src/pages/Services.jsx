@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import axios from "axios";
-import homeHero from "../assets/home1.jpg";
+import homeHero from "../assets/pppp.jpg";
 import Hero from "../components/Hero";
 import { Clock, PackageCheck, FileCheck } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
