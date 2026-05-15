@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const Hero = ({ title, subtitle, image, description }) => {
   return (
-    <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden mt-3">
+    <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden mt-18 md:mt-3">
       
       <div
         className="relative w-full aspect-[16/9] 
