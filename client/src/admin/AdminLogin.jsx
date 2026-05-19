@@ -33,7 +33,7 @@ useEffect(() => {
 
     try {
       const res = await axios.post(
-        "https://swamiglobaltrade-production.up.railway.app/api/admin/login",
+        "https://swami-global-trade.onrender.com/api/admin/login",
         formData
       );
 

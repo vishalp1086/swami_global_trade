@@ -24,7 +24,7 @@ const ProductPage = () => {
   const fetchProduct = async () => {
     try {
       const res = await axios.get(
-        `https://swamiglobaltrade-production.up.railway.app/api/products/${id}`
+        `https://swami-global-trade.onrender.com/api/products/${id}`
       );
 
       setProduct(res.data);
@@ -61,7 +61,7 @@ const ProductPage = () => {
 
     try {
       const res = await axios.post(
-        "https://swamiglobaltrade-production.up.railway.app/api/products/request-download",
+        "https://swami-global-trade.onrender.com/api/products/request-download",
         {
           name: lead.name,
           email: lead.email,

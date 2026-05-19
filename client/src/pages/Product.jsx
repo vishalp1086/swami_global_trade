@@ -16,7 +16,7 @@ const Product = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("https://swamiglobaltrade-production.up.railway.app/api/products");
+      const res = await axios.get("https://swami-global-trade.onrender.com/api/products");
       setProducts([...res.data].reverse());
     } catch (err) {
       console.log(err);

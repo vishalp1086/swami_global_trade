@@ -28,7 +28,7 @@ const AdminBlogForm = () => {
   const fetchBlog = async () => {
     try {
       const res = await axios.get(
-        `https://swamiglobaltrade-production.up.railway.app/api/blogs/edit/${id}`
+        `https://swami-global-trade.onrender.com/api/blogs/edit/${id}`
       );
 
       const blog = res.data;
@@ -77,13 +77,13 @@ if (blog.image?.url) {
     try {
       if (isEdit) {
         await axios.put(
-          `https://swamiglobaltrade-production.up.railway.app/api/blogs/${id}`,
+          `https://swami-global-trade.onrender.com/api/blogs/${id}`,
           data
         );
         alert("Blog Updated");
       } else {
         await axios.post(
-          "https://swamiglobaltrade-production.up.railway.app/api/blogs",
+          "https://swami-global-trade.onrender.com/api/blogs",
           data
         );
         alert("Blog Added");
