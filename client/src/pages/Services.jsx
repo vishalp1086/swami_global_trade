@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import { Clock, PackageCheck, FileCheck } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import emailjs from "@emailjs/browser";
 
 
 
@@ -72,18 +73,68 @@ const fetchProducts = async () => {
     console.log(err);
   }
 };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      await axios.post("https://swami-global-trade.onrender.com/api/enquiry", form);
-      setSubmitted(true);
-    } catch (err) {
-      console.log(err);
-      alert("Failed to send enquiry");
-    }
+  //   try {
+  //     await axios.post("https://swami-global-trade.onrender.com/api/enquiry", form);
+  //     setSubmitted(true);
+  //   } catch (err) {
+  //     console.log(err);
+  //     alert("Failed to send enquiry");
+  //   }
+  // };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const templateParams = {
+    name: form.name,
+    company: form.company,
+    email: form.email,
+    country: form.country,
+    phone: form.phone,
+    quantity: form.quantity,
+    enquiryType: form.enquiryType,
+    products: form.products.join(", "),
+    message: form.message,
   };
 
+  try {
+    // Send enquiry to Admin
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE,
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+
+    // Send auto reply to Customer
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_CUSTOMER_TEMPLATE,
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+
+    setSubmitted(true);
+
+    setForm({
+      name: "",
+      company: "",
+      email: "",
+      country: "",
+      phone: "",
+      quantity: "",
+      enquiryType: "",
+      message: "",
+      products: [],
+    });
+
+  } catch (error) {
+    console.error(error);
+    alert("Unable to send enquiry. Please try again.");
+  }
+};
   if (submitted) {
 
     return (
